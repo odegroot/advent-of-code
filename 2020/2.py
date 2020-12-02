@@ -38,7 +38,7 @@ def example_input():
   ''')
 
 def full_input():
-  with open('2.input.txt') as f:
+  with open('2.input') as f:
     return f.read()
 
 if __name__ == "__main__":
