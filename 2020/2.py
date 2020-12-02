@@ -1,6 +1,5 @@
 # https://adventofcode.com/2020/day/2
 
-import itertools
 import operator
 import re
 import textwrap
