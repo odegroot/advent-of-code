@@ -59,7 +59,7 @@ example = '''
 576
 '''.strip()
 
-with open(f'{__file__[-4]}.input') as f:
+with open(f'{__file__[-5:-3]}.input') as f:
   full_input = f.read().strip()
 
 part_one()

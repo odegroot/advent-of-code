@@ -61,7 +61,7 @@ def example_input():
   ''').strip()
 
 def full_input():
-  with open('3.input') as f:
+  with open(f'{__file__[-5:-3]}.input') as f:
     return f.read().strip()
 
 if __name__ == "__main__":

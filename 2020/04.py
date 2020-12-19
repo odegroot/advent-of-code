@@ -119,7 +119,7 @@ eyr:2022
 iyr:2010 hgt:158cm hcl:#b6652a ecl:blu byr:1944 eyr:2021 pid:093154719
 '''.strip()
 
-with open(f'{__file__[-4]}.input') as f:
+with open(f'{__file__[-5:-3]}.input') as f:
   full_input = f.read().strip()
 
 part_one()
