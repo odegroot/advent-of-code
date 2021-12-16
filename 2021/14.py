@@ -1,6 +1,7 @@
 # https://adventofcode.com/2021/day/14
 
 import collections
+import os
 import re # https://docs.python.org/3/library/re.html
 
 def part_one(polymer, rules):
@@ -53,7 +54,7 @@ def parse(input):
   return template, rules
 
 def read_input(kind):
-  with open(f'{__file__[-5:-3]}.{kind}.input') as f:
+  with open(f'{os.path.splitext(__file__)[0]}.{kind}.input') as f:
     return f.read()
 
 if __name__ == "__main__":
