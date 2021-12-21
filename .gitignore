@@ -1,3 +1,4 @@
+*.ex?
 *.example
 *.input
 node_modules
