@@ -1,6 +1,6 @@
 # https://adventofcode.com/2022/day/1
 
-import textwrap
+import os
 
 def part_one(elves):
   elf_calories = [sum(items) for items in elves]
@@ -17,29 +17,10 @@ def parse(input):
   elves = [[int(l) for l in elf_block.splitlines()] for elf_block in elf_blocks]
   return elves
 
-def example_input():
-  return textwrap.dedent('''
-    1000
-    2000
-    3000
-
-    4000
-
-    5000
-    6000
-
-    7000
-    8000
-    9000
-
-    10000
-  '''
-  )
-
-def full_input():
-  with open(f'{__file__[-5:-3]}.input') as f:
+def read_input(kind):
+  with open(f'{os.path.splitext(__file__)[0]}.{kind}') as f:
     return f.read()
 
 if __name__ == "__main__":
-  part_one(parse(full_input().strip()))
-  part_two(parse(full_input().strip()))
+  part_one(parse(read_input('input')))
+  part_two(parse(read_input('input')))
