@@ -11,16 +11,17 @@ def part_one(rotations):
       zeroes += 1
   print(zeroes)
 
-def part_two(rotations):
+def part_two(rotations: list[int]):
   dial = 50
   zeroes = 0
   for rotation in rotations:
-    before = dial // 100
-    dial += rotation
-    after = dial // 100
-    zeroes += abs(after - before)
-    # if dial % 100 == 0:
-    #   zeroes += 1
+    for step in range(abs(rotation)):
+      if rotation > 0:
+        dial += 1
+      else:
+        dial -= 1
+      if dial % 100 == 0:
+        zeroes += 1  
   print(zeroes)
 
 def parse(input):
@@ -33,6 +34,6 @@ def read_input(kind):
 
 if __name__ == "__main__":
   part_one(parse(read_input('example')))
-  # part_one(parse(read_input('input')))
+  part_one(parse(read_input('input')))
   part_two(parse(read_input('example')))
   part_two(parse(read_input('input')))
