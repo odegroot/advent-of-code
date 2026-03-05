@@ -2,7 +2,7 @@
 
 import os
 
-def part_one(rotations):
+def part_one(rotations: list[int]):
   dial = 50
   zeroes = 0
   for rotation in rotations:
@@ -15,7 +15,7 @@ def part_two(rotations: list[int]):
   dial = 50
   zeroes = 0
   for rotation in rotations:
-    for step in range(abs(rotation)):
+    for _ in range(abs(rotation)):
       if rotation > 0:
         dial += 1
       else:
@@ -24,11 +24,11 @@ def part_two(rotations: list[int]):
         zeroes += 1  
   print(zeroes)
 
-def parse(input):
+def parse(input: str):
   rotations = [int(rotation.replace('L', '-').replace('R', '')) for rotation in input.splitlines()]
   return rotations
 
-def read_input(kind):
+def read_input(kind: str):
   with open(f'{os.path.splitext(__file__)[0]}.{kind}') as f:
     return f.read()
 
